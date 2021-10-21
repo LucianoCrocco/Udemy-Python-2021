@@ -28,12 +28,18 @@ class Persona:
     def edad(self, edad):
         self._edad = edad
 
+    def funcionMostrar(persona: object):
+        print(f"Persona: {persona.nombre} {persona.apellido} {persona.edad}")
+
     def mostrarDetalles(self):
         print(f"Persona: {self._nombre} {self.apellido} {self.edad}")
 
 
+
+
 persona1 = Persona("Ricardo", "Lopez", 62)
-mostrarDetalles(persona1)
+Persona.funcionMostrar(persona1)
+persona1.mostrarDetalles()
 
 persona1.nombre = "Juan Carlos"
 print(persona1.nombre)
