@@ -1,5 +1,5 @@
 # Un set no mantiene un orden (no existe un indice), no tiene elementos duplicados
-# No es posible modificar los elementos almacenacos, pero si eliminar o agregar
+# No es posible modificar los elementos almacenados, pero si eliminar o agregar
 
 planetas = {"Marte", "Jupiter", "Venus"}
 print(planetas)

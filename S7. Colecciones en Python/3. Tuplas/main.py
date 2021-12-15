@@ -1,5 +1,4 @@
-# La listas son mutables, a diferencia de las listas, las Tuplas
-# NO SON modificables, es inmutable.
+# La listas son mutables, a diferencia de las listas, las Tuplas NO SON modificables, es inmutable.
 # Son similares a las listas pero la diferencia principal es la anteriormente mencionada.
 
 frutas = ("Naranja", "Platano", "Guayaba")

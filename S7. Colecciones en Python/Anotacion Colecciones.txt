@@ -1,0 +1,258 @@
+            1. LISTAS
+
+# Definir una lista de tipo str
+print("Definir una lista de tipo str")
+nombres = ["Juan", "Karla", "Ricardo", "Maria"]
+
+# Imprimir la lista de nombres
+print("\n\tImprimir la lista de nombres")
+print(nombres)
+
+# Acceder a los elementos de una lista
+print("\n\tAcceder a los elementos de una lista")
+print(nombres[0])
+print(nombres[1])
+
+# Acceder a los elementos de manera inversa
+print("\n\tAcceder a los elementos de manera inversa")
+print(nombres[-1])
+print(nombres[-2])
+
+# Imprimir un rango
+print("\n\tImprimir un rango")
+print(nombres[0:2])  # Sin incluir el ultimo indice
+
+# Ir del inicio de la lista al índice (sin incluirlo)
+print("\n\tIr del inicio de la lista al índice (sin incluirlo)")
+print(nombres[:3])  # Sin incluir el ultimo indice
+
+# Desde el inidice indicado hasta el final
+print("\n\tDesde el indice indicado hasta el final")
+print(nombres[1:])  # Sin incluir el ultimo indice
+
+# Cambiar un valor de la lista
+print("\n\tCambiar un valor de la lista")
+nombres[3] = "Ivone"
+print(nombres)
+
+
+# Iterar una lista
+print("\n\tIterar una lista")
+for i in nombres:
+    print(i)
+else:
+    print("No existen mas nombres en la lista")
+
+# Preguntar el largo de una lista
+print("\n\tPreguntar el largo de una lista")
+print(len(nombres))
+
+# Agregar un elemento a la lista
+print("\n\tAgregar un elemento a la lista")
+nombres.append("Lorenzo")
+print(nombres)
+
+# Insertar un elemento a la lista en un indice especifico
+print("\n\tAgregar un elemento a la lista")
+nombres.insert(1, "Octavio")
+print(nombres)
+
+# Remover un elemento, no por indice sino por valor
+print("\n\tRemover un elemento, no por indice sino por valor")
+nombres.remove("Octavio")
+print(nombres)
+
+# Remover el ultimo valor agregado
+print("\n\tRemover el ultimo valor agregado")
+nombres.pop()
+print(nombres)
+
+# Remover un elemento en un indice indicado
+print("\n\tRemover un elemento en un indice indicado")
+del nombres[0]
+print(nombres)
+
+# Remover TODOS los elementos
+print("\n\tRemover TODOS los elementos")
+nombres.clear()
+print(nombres)
+
+
+# Borrar la lista de la memoria
+print("\n\tBorrar la lista de la memoria")
+del nombres
+print(nombres)
+
+------------------------------------------------------------------------------------------
+
+            2. TUPLAS
+
+# La listas son mutables, a diferencia de las listas, las Tuplas NO SON modificables, es inmutable.
+# Son similares a las listas pero la diferencia principal es la anteriormente mencionada.
+
+frutas = ("Naranja", "Platano", "Guayaba")
+print(frutas)
+
+# Saber el largo (cantidad de elementos)
+print("\n\tSaber el largo (cantidad de elementos)")
+print(len(frutas))
+
+
+# Acceder a un elemento
+print("\n\tAcceder a un elemento")
+print(frutas[1])
+
+# Navegacion inversa
+print("\n\tNavegacion inversa")
+print(frutas[-1])
+
+
+# Acceder aun rango de valores
+print("\n\tAcceder aun rango de valores")
+print(frutas[0:1])
+print("La coma al final de la tupla al mostrar un rango 0:1 hace la diferencia entre un string y una tupla")
+
+# Recorrer elementos
+print("\n\tRecorrer elementos y modificar el ultimo caracter que lee")
+for fruta in frutas:
+    print(fruta, end=' ')
+
+# Cambiar el valor de una tupla
+# frutas[0] = 'Pera' -> No funciona
+# Para hacerlo creamos una lista y le asignamos la tupla, cambiamos la lista y volvemos a asignar a la tupla
+print("\n\n\tCambiar el valor de una tupla")
+frutaLista = list(frutas)
+frutaLista[0] = 'Pera'
+frutas = tuple(frutaLista)
+print(frutas)
+
+# Eliminar la tupla por completo
+print("\n\tEliminar la tupla por completo -> del frutas")
+del frutas
+print(frutas)
+
+------------------------------------------------------------------------------------------
+
+            3. SET
+            
+# Un set no mantiene un orden (no existe un indice), no tiene elementos duplicados
+# No es posible modificar los elementos almacenados, pero si eliminar o agregar
+
+planetas = {"Marte", "Jupiter", "Venus"}
+print(planetas)
+
+# Conocer la cantida de elementos
+print("\n\tConocer la cantida de elementos")
+print(len(planetas))
+
+# Revisar si un elemento esta presente
+print("\n\tRevisar si un elemento esta presente, tambien utilizable en listas y tuplas")
+print("Marte" in planetas)
+
+# Agregar mas elementos
+print("\n\tAgregar mas elementos")
+planetas.add("Tierra")
+print(planetas)
+
+# No se pueden duplicar elementos
+print("\n\tNo se pueden duplicar elementos, intentamos nuevamente agregar Tierra")
+planetas.add("Tierra")
+print(planetas)
+
+# Eliminar elemento, si no lo encuentra devuelve error
+print("\n\tEliminar elemento, si no lo encuentra devuelve error")
+planetas.remove("Tierra")
+print(planetas)
+
+# Eliminar elemento, si no lo encuentra NO devuelve error
+print("\n\tEliminar elemento, si no lo encuentra NO devuelve error")
+planetas.discard("Tierra")
+print(planetas)
+
+# Limpiar todos los elementos de un set
+print("\n\tLimpiar todos los elementos de un set")
+planetas.clear()
+print(planetas)
+
+# Eliminar nuestro set
+print("\n\tEliminar nuestro set")
+del planetas
+print(planetas)
+
+
+------------------------------------------------------------------------------------------
+
+            4. DICCIONARIOS
+
+# En lugar de tener una coleccion de datos, pero organizadas a traves de una key
+# Con la key podemos acceder al valor asociado al cual acceder.
+# dict (key, value)
+# Como con listas, tuplas y sets, cualquier tipo inmutable se puede utilizar
+# int, float, bool, str, etc
+
+# No existen los indices dentro de un diccionario, nuestra referencia es la key
+
+diccionario = {
+    "IDE": "Integrated Development Enviroment",
+    "OOP": "Object Oriented Programming",
+    "DBMS": "Database Managment System"
+}
+
+print(diccionario)
+
+# Saber la cantidad de elementos
+print("\n\tSaber la cantidad de elementos")
+print(len(diccionario))
+
+# Acceder a un elemento
+print("\n\tAcceder a un elemento")
+print(diccionario["IDE"])
+
+# Otra forma de acceder a un elemento
+print("\n\tOtra forma de acceder a un elemento")
+print(diccionario.get("OOP"))
+
+# Modificar elementos
+print("\n\tModificar elementos")
+diccionario["IDE"] = "integrated development enviroment"
+print(diccionario)
+
+# Recorrer los elementos utilizando una funcion para recuperar la key:value
+print("\n\tRecorrer los elementos utilizando una funcion para recuperar la key:value")
+for termino, valor in diccionario.items():
+    print(termino, valor)
+
+# Recorrer los elementos recuperando solo la key
+print("\n\tRecorrer los elementos recuperando solo la key")
+for termino in diccionario.keys():
+    print(termino)
+
+# Recorrer los elementos recuperando el value
+print("\n\tRecorrer los elementos recuperando el value")
+for termino in diccionario.values():
+    print(termino)
+
+# Comprobar existencia de algun elemento
+print("\n\tComprobar existencia de algun elemento")
+print("IDE" in diccionario)
+print("ASD" in diccionario)
+
+# Agregar algun elemento, NO ES POSIBLE agregar llaves duplicadas, reemplaza el valor original
+print("\n\tAgregar algun elemento, NO ES POSIBLE agregar llaves duplicadas, reemplaza el valor original")
+diccionario["PK"] = "Primary Key"
+print(diccionario)
+
+# Remover un elemento
+print("\n\tRemover un elemento")
+diccionario.pop("DBMS")
+print(diccionario)
+
+# Remover TODOS los elemento
+print("\n\tRemover TODOS los elemento")
+diccionario.clear()
+print(diccionario)
+
+# Eliminar el diccionario
+print("\n\tEliminar el diccionario")
+del diccionario
+print(diccionario)
